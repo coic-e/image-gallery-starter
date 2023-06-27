@@ -69,16 +69,16 @@ export default function SharedModal({
                 initial="enter"
                 animate="center"
                 exit="exit"
-                className="absolute"
+                className="w-full h-full absolute"
               >
                 <Image
                   src={`https://res.cloudinary.com/${
                     process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME
-                  }/image/upload/${
+                  }/image/upload/c_scale,${navigation ? 'w_1280' : 'w_1920'}/${
                     currentImage.public_id
                   }.${currentImage.format}`}
-                  width={navigation ? 853 : 1280} 
-                  height={navigation ? 1280 : 1920} 
+                  layout="fill"
+                  objectFit="contain"
                   priority
                   alt="COICE image"
                   onLoadingComplete={() => setLoaded(true)}
