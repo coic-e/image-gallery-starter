@@ -74,11 +74,11 @@ export default function SharedModal({
                 <Image
                   src={`https://res.cloudinary.com/${
                     process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME
-                  }/image/upload/c_scale,${navigation ? 'w_1280' : 'w_1920'}/${
+                  }/image/upload/${
                     currentImage.public_id
                   }.${currentImage.format}`}
-                  width={navigation ? 1280 : 1920}
-                  height={navigation ? 853 : 1280}
+                  width={navigation ? 853 : 1280} 
+                  height={navigation ? 1280 : 1920} 
                   priority
                   alt="COICE image"
                   onLoadingComplete={() => setLoaded(true)}
