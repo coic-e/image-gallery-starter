@@ -62,7 +62,7 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
               2023 COICE Photos
             </h1>
             <p className="max-w-[40ch] text-white/75 sm:max-w-[32ch]">
-              Fotos do nosso HALLOWEEN!
+              Fotos do nosso HALLOWEEN por <a href="https://www.instagram.com/gabifelin/">Gabriela Felin</a>!
             </p>
           </div>
           {images.map(({ id, public_id, format, blurDataUrl }) => (
