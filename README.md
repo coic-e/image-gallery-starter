@@ -1,4 +1,4 @@
-# Nome do Projeto
+# COICE: Image Gallery Starter
 
 Uma breve descrição do que seu projeto faz. Tente ser claro e conciso em sua explicação.
 
@@ -11,8 +11,8 @@ Essas instruções fornecerão uma cópia do projeto em execução na sua máqui
 O que você precisa para instalar o software e como instalá-lo.
 
 ```
-git clone https://github.com/seuusuario/seuprojeto.git
-cd seuprojeto
+git clone https://github.com/lucaoskaique/image-gallery-starter.git
+cd image-gallery-starter
 npm install
 ```
 
@@ -42,8 +42,6 @@ npm test
 
 ### E testes de estilo de codificação
 
-Explique o que esses testes verificam e por que.
-
 ```
 npm run lint
 ```
@@ -60,17 +58,17 @@ Notas adicionais sobre como implantar isso em um sistema ativo.
 
 ## Contribuindo
 
-Por favor, leia [CONTRIBUTING.md](https://github.com/seuusuario/seuprojeto/CONTRIBUTING.md) para detalhes sobre o nosso código de conduta e o processo para enviar pedidos de pull.
+Por favor, leia [CONTRIBUTING.md](https://github.com/lucaoskaique/image-gallery-starter/CONTRIBUTING.md) para detalhes sobre o nosso código de conduta e o processo para enviar pedidos de pull.
 
 ## Versionamento
 
-Nós usamos [SemVer](http://semver.org/) para versionamento. Para as versões disponíveis, veja as [tags neste repositório](https://github.com/seuusuario/seuprojeto/tags). 
+Nós usamos [SemVer](http://semver.org/) para versionamento. Para as versões disponíveis, veja as [tags neste repositório](https://github.com/lucaoskaique/image-gallery-starter/tags). 
 
 ## Autores
 
 * ** LUCAOS KAIQUE ** - *Trabalho inicial* - [lucaoskaique](https://github.com/lucaoskaique)
 
-Veja também a lista de [contribuidores](https://github.com/seuusuario/seuprojeto/contributors) que participaram deste projeto.
+Veja também a lista de [contribuidores](https://github.com/lucaoskaique/image-gallery-starter/contributors) que participaram deste projeto.
 
 ## Licença
 
