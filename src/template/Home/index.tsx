@@ -28,41 +28,62 @@ const Home: React.FC<HomeProps> = ({ images }) => {
   return (
     <>
       <Base>
-        <S.MainContainer>
-          {photoId && (
-            <Modal
-              images={images}
-              onClose={() => {
-                setLastViewedPhoto(photoId);
-              }}
-            />
-          )}
-          <S.ImageGrid>
-            {images.map(({ id, public_id, format, blurDataUrl }) => (
-              <Link
-                key={id}
-                href={`/?photoId=${id}`}
-                as={`/p/${id}`}
-                ref={id === Number(lastViewedPhoto) ? lastViewedPhotoRef : null}
-                shallow
+          <S.ImageContainer>
+            <S.ImageOverlay>
+              <Image
+                src="/COICE-PERFIL.png"
+                alt="Horseshoe background"
+                width={620}
+                height={704}
+              />
+            </S.ImageOverlay>
+            <h1>2023 COICE Photos</h1>
+            <p>
+              Fotos do nosso HALLOWEEN por{" "}
+              <a
+                href="https://www.instagram.com/gabifelin/"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <a
-                  ref={
-                    id === Number(lastViewedPhoto) ? lastViewedPhotoRef : null
-                  }
+                Gabriela Felin
+              </a>
+              !
+            </p>
+          </S.ImageContainer>
+            {photoId && (
+              <Modal
+                images={images}
+                onClose={() => {
+                  setLastViewedPhoto(photoId);
+                }}
+              />
+            )}
+
+ 
+              {images.map(({ id, public_id, format, blurDataUrl }) => (
+                <Link
+                  key={id}
+                  href={`/?photoId=${id}`}
+                  as={`/p/${id}`}
+                  shallow
+                  passHref
                 >
-                  <Image
-                    alt="Descrição da imagem"
-                    src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_720/${public_id}.${format}`}
-                    width={720}
-                    height={480}
-                  />
-                </a>
-              </Link>
-            ))}
-          </S.ImageGrid>
-        </S.MainContainer>
-        <S.StyledFooter>{/* ... Conteúdo do Footer ... */}</S.StyledFooter>
+                  <S.ImageContent>
+                    <Image
+                      alt="Coice 2023 photo"
+                      placeholder="blur"
+                      blurDataURL={blurDataUrl}
+                      src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_720/${public_id}.${format}`}
+                      width={720}
+                      height={480}
+                      sizes="(max-width: 640px) 100vw,
+                  (max-width: 1280px) 50vw,
+                  (max-width: 1536px) 33vw,
+                  25vw"
+                    />
+                  </S.ImageContent>
+                </Link>
+              ))}
       </Base>
     </>
   );

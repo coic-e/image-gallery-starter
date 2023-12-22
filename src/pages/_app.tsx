@@ -1,5 +1,4 @@
 import type { AppProps } from "next/app";
-import "../styles/index.css";
 import Head from "next/head";
 import theme from "styles/theme";
 import { ThemeProvider } from "styled-components";
